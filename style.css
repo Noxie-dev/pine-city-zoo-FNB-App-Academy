@@ -15,7 +15,7 @@ body {
     height: 80px;
     background-image: url(images/wood-bg.png);
     background-repeat: repeat-x;
-    
+
 }
 
 #header img{
@@ -44,7 +44,7 @@ body {
     display: block;
     width: 33%;
     height: 35px;
-   
+
     text-align: center;
     line-height: 35px;
     font-weight: 700;
@@ -52,7 +52,7 @@ body {
     text-align: center;
     text-decoration: none;
     padding-top: 5px;
-    
+
 }
 /*======================== Main-home ========================*/
 #main-home {
@@ -93,4 +93,57 @@ body {
     text-align: center;
     text-decoration: none;
     padding-top: 12px;
+}
+
+/*======================== Main ========================*/
+
+#main {
+    margin-top: 119px;
+    background-image: url(images/map-blur.png);
+    background-repeat: repeat-y;
+}
+
+#content {
+    padding-top: 1px;
+    padding-bottom: 50px;
+}
+
+/*======================== Info Box ========================*/
+
+a.info-box {
+    display: flex;
+    align-items: center;
+    background: rgba(225,225,225,0.8);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.info-box img.right {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 25px;
+    height: auto;
+}
+
+.info-box .text-content {
+    flex: 1;
+}
+
+.info-box h3 {
+    margin: 10px 0 5px 0;
+    color: #2c5530;
+    font-size: 18px;
+}
+
+.info-box p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
 }
