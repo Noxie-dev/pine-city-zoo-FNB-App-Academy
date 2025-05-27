@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lion - Pine City Zoo</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <style>
+            /* Full-screen background image for lion page */
+            body {
+                background-image: url('images/map-blur.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                min-height: 100vh;
+            }
+
+            /* Ensure main content area doesn't override the body background */
+            #main {
+                background-image: none;
+                background-color: transparent;
+            }
+
+            /* Basic header structure - detailed styling now in zoo-header-animations.css */
+            #header {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 80px;
+                z-index: 500;
+                text-align: center;
+            }
+
+            /* Logo basic positioning - hover effects in animation CSS */
+            #header img {
+                max-height: 70px;
+                margin: 5px 0;
+            }
+
+            /* Ensure top navigation tabs remain sticky */
+            #tabs-top {
+                position: fixed;
+                top: 80px;
+                width: 100%;
+                height: 50px;
+                background-color: #2a8d46;
+                z-index: 500;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <img src="images/logo.png" alt="Pine City Zoo Logo">
+        </div>
+        <!-- Top navigation tabs for main sections -->
+        <div id="tabs-top">
+            <!-- Navigation links to main sections of the website -->
+            <a href="animals.html" class="nav-link">
+                <i class="fas fa-paw"></i>
+                <span>ANIMALS</span>
+            </a>
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-map"></i>
+                <span>MAP</span>
+            </a>
+            <a href="places.html" class="nav-link">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>PLACES</span>
+            </a>
+        </div>
+        <div id="main">
+            <div id="content">
+                <div id="info-box-full">
+                    <img src="images/lion.jpg" alt="Majestic lion in natural habitat">
+                    <h3>LION</h3>
+                    <p>The lion is the largest cat in the world. It is a carnivore
+                        and uses its sharp claws to hunt and kill prey.
+                        Lions are very social animals and live in family groups called prides.
+                        They are also very intelligent and have been known to use tools
+                        and communicate with each other using a complex system of sounds and body language.
+                    </p>
+                    <a class="info-box" href="https://en.wikipedia.org/wiki/Lion">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom navigation tabs -->
+        <div id="tabs-bottom">
+            <!-- Links to weather and feedback sections -->
+            <a href="weather.html" class="nav-link">
+                <i class="fas fa-cloud-sun"></i>
+                <span>WEATHER</span>
+            </a>
+            <a href="feedback.html" class="nav-link">
+                <i class="fas fa-comments"></i>
+                <span>FEEDBACK</span>
+            </a>
+        </div>
+            <!-- Load the spectacular header animations -->
+        <script src="js/zoo_header_animations.js"></script>
+    </body>
+</html>

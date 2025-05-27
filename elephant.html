@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Elephant - Pine City Zoo</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <style>
+            /* Full-screen background image for elephant page */
+            body {
+                background-image: url('images/map-blur.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                min-height: 100vh;
+            }
+
+            /* Ensure main content area doesn't override the body background */
+            #main {
+                background-image: none;
+                background-color: transparent;
+            }
+
+            /* Basic header structure - detailed styling now in zoo-header-animations.css */
+            #header {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 80px;
+                z-index: 500;
+                text-align: center;
+            }
+
+            /* Logo basic positioning - hover effects in animation CSS */
+            #header img {
+                max-height: 70px;
+                margin: 5px 0;
+            }
+
+            /* Ensure top navigation tabs remain sticky */
+            #tabs-top {
+                position: fixed;
+                top: 80px;
+                width: 100%;
+                height: 50px;
+                background-color: #2a8d46;
+                z-index: 500;
+                overflow: auto;
+            }
+
+            /* Elephant Slideshow Styles */
+            .elephant-slideshow {
+                width: 100%;
+                margin-bottom: 15px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 4px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            }
+
+            .slideshow-container {
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-bottom: 60%; /* 16:9.6 aspect ratio for responsive design */
+                overflow: hidden;
+            }
+
+            .slide {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0;
+                transform: scale(1.02) translateZ(0); /* Hardware acceleration + subtle scale */
+                border-radius: 4px;
+                /* Optimize for performance - only animate transform and opacity */
+                will-change: transform, opacity;
+                backface-visibility: hidden; /* Prevent flickering */
+                -webkit-font-smoothing: antialiased; /* Smooth rendering */
+            }
+
+            .slide.active {
+                opacity: 1;
+                transform: scale(1) translateZ(0);
+            }
+
+            /* Buttery-smooth professional transitions with motion blur effect */
+            @keyframes slideInSmooth {
+                0% {
+                    opacity: 0;
+                    transform: scale(1.015) translateY(8px) translateZ(0);
+                    filter: blur(0.5px); /* Subtle motion blur */
+                }
+                25% {
+                    opacity: 0.3;
+                    transform: scale(1.01) translateY(6px) translateZ(0);
+                    filter: blur(0.3px);
+                }
+                50% {
+                    opacity: 0.7;
+                    transform: scale(1.005) translateY(3px) translateZ(0);
+                    filter: blur(0.1px);
+                }
+                75% {
+                    opacity: 0.9;
+                    transform: scale(1.002) translateY(1px) translateZ(0);
+                    filter: blur(0px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: scale(1) translateY(0) translateZ(0);
+                    filter: blur(0px);
+                }
+            }
+
+            @keyframes slideOutSmooth {
+                0% {
+                    opacity: 1;
+                    transform: scale(1) translateY(0) translateZ(0);
+                    filter: blur(0px);
+                }
+                25% {
+                    opacity: 0.9;
+                    transform: scale(0.998) translateY(-1px) translateZ(0);
+                    filter: blur(0px);
+                }
+                50% {
+                    opacity: 0.7;
+                    transform: scale(0.995) translateY(-3px) translateZ(0);
+                    filter: blur(0.1px);
+                }
+                75% {
+                    opacity: 0.3;
+                    transform: scale(0.99) translateY(-6px) translateZ(0);
+                    filter: blur(0.3px);
+                }
+                100% {
+                    opacity: 0;
+                    transform: scale(0.985) translateY(-8px) translateZ(0);
+                    filter: blur(0.5px); /* Subtle motion blur */
+                }
+            }
+
+            /* Crossfade transition for seamless blending */
+            @keyframes crossfadeIn {
+                0% {
+                    opacity: 0;
+                    transform: scale(1.008) translateZ(0);
+                }
+                100% {
+                    opacity: 1;
+                    transform: scale(1) translateZ(0);
+                }
+            }
+
+            @keyframes crossfadeOut {
+                0% {
+                    opacity: 1;
+                    transform: scale(1) translateZ(0);
+                }
+                100% {
+                    opacity: 0;
+                    transform: scale(0.992) translateZ(0);
+                }
+            }
+
+            /* Smooth animation classes with optimized easing curves */
+            .slide.entering {
+                animation: slideInSmooth 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+                z-index: 2; /* Ensure entering slide is on top */
+            }
+
+            .slide.exiting {
+                animation: slideOutSmooth 1.4s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards;
+                z-index: 1; /* Ensure exiting slide is below */
+            }
+
+            /* Alternative crossfade mode for ultra-smooth transitions */
+            .slide.crossfade-in {
+                animation: crossfadeIn 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+                z-index: 2;
+            }
+
+            .slide.crossfade-out {
+                animation: crossfadeOut 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+                z-index: 1;
+            }
+
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                .slideshow-container {
+                    padding-bottom: 70%; /* Slightly taller on mobile */
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <img src="images/logo.png" alt="Pine City Zoo Logo">
+        </div>
+        <!-- Top navigation tabs for main sections -->
+        <div id="tabs-top">
+            <!-- Navigation links to main sections of the website -->
+            <a href="animals.html" class="nav-link">
+                <i class="fas fa-paw"></i>
+                <span>ANIMALS</span>
+            </a>
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-map"></i>
+                <span>MAP</span>
+            </a>
+            <a href="places.html" class="nav-link">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>PLACES</span>
+            </a>
+        </div>
+        <div id="main">
+            <div id="content">
+                <div id="info-box-full">
+                    <!-- Elephant Image Slideshow -->
+                    <div class="elephant-slideshow">
+                        <div class="slideshow-container">
+                            <img src="images/elephent.png" alt="Elephant in natural habitat" class="slide active">
+                            <img src="images/elephent-02.png" alt="Elephant close-up view" class="slide">
+                            <img src="images/elephent-03.png" alt="Elephant family group" class="slide">
+                        </div>
+                    </div>
+                    <h3>ELEPHANT</h3>
+                    <p>The elephant is the largest land animal in the world. It is a herbivore
+                        and uses its long trunk to eat leaves, grass, and fruit.
+                        Elephants are very social animals and live in family groups called herds.
+                        They are also very intelligent and have been known to use tools
+                        and communicate with each other using a complex system of sounds and body language.
+                    </p>
+                    <a class="info-box" href="https://en.wikipedia.org/wiki/Elephant">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div id="tabs-bottom">
+            <a href="weather.html" class="nav-link">
+                <i class="fas fa-cloud-sun"></i>
+                <span>WEATHER</span>
+            </a>
+            <a href="feedback.html" class="nav-link">
+                <i class="fas fa-comments"></i>
+                <span>FEEDBACK</span>
+            </a>
+        </div>
+            <!-- Load the spectacular header animations -->
+        <script src="js/zoo_header_animations.js"></script>
+
+        <!-- Enhanced Elephant Slideshow JavaScript with Smooth Transitions -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const slides = document.querySelectorAll('.slide');
+                let currentSlide = 0;
+                let isTransitioning = false;
+                const slideInterval = 2500; // 2.5 seconds
+                const transitionDuration = 1400; // 1.4 seconds for smooth animations
+
+                // Performance optimization: Use requestAnimationFrame for smooth animations
+                function smoothTransition(callback) {
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(callback);
+                    });
+                }
+
+                function showSlide(index) {
+                    if (isTransitioning || index === currentSlide) return;
+
+                    isTransitioning = true;
+                    const previousSlide = currentSlide;
+                    currentSlide = index;
+
+                    // Clean up all animation classes first
+                    slides.forEach(slide => {
+                        slide.classList.remove('active', 'entering', 'exiting', 'crossfade-in', 'crossfade-out');
+                    });
+
+                    // Start exit animation for current slide
+                    if (slides[previousSlide]) {
+                        smoothTransition(() => {
+                            slides[previousSlide].classList.add('exiting');
+                        });
+                    }
+
+                    // Start enter animation for new slide with perfect timing
+                    smoothTransition(() => {
+                        slides[currentSlide].classList.add('active', 'entering');
+                    });
+
+                    // Reset transition lock after animation completes
+                    setTimeout(() => {
+                        isTransitioning = false;
+                        // Clean up animation classes
+                        slides.forEach(slide => {
+                            slide.classList.remove('entering', 'exiting');
+                        });
+                    }, transitionDuration);
+                }
+
+                function nextSlide() {
+                    if (isTransitioning) return; // Prevent overlapping transitions
+                    const nextIndex = (currentSlide + 1) % slides.length;
+                    showSlide(nextIndex);
+                }
+
+                // Initialize the slideshow with performance optimizations
+                if (slides.length > 0) {
+                    // Preload all images for smooth transitions
+                    slides.forEach((slide, index) => {
+                        const img = new Image();
+                        img.src = slide.src;
+
+                        // Set initial state
+                        if (index === 0) {
+                            slide.classList.add('active');
+                        }
+                    });
+
+                    // Enhanced slideshow timer with better performance
+                    let slideshowTimer;
+                    let lastTransitionTime = Date.now();
+
+                    function startSlideshow() {
+                        slideshowTimer = setInterval(() => {
+                            const now = Date.now();
+                            // Ensure minimum time between transitions for smoothness
+                            if (now - lastTransitionTime >= slideInterval && !isTransitioning) {
+                                nextSlide();
+                                lastTransitionTime = now;
+                            }
+                        }, 100); // Check more frequently for precise timing
+                    }
+
+                    function stopSlideshow() {
+                        clearInterval(slideshowTimer);
+                    }
+
+                    // Enhanced hover controls with smooth pause/resume
+                    const slideshowContainer = document.querySelector('.elephant-slideshow');
+                    if (slideshowContainer) {
+                        let hoverTimeout;
+
+                        slideshowContainer.addEventListener('mouseenter', () => {
+                            clearTimeout(hoverTimeout);
+                            stopSlideshow();
+                        });
+
+                        slideshowContainer.addEventListener('mouseleave', () => {
+                            // Smooth resume after a brief delay
+                            hoverTimeout = setTimeout(() => {
+                                if (!isTransitioning) {
+                                    startSlideshow();
+                                }
+                            }, 200);
+                        });
+
+                        // Start the slideshow
+                        startSlideshow();
+                    }
+
+                    // Performance monitoring and optimization
+                    if (window.performance && window.performance.mark) {
+                        window.performance.mark('slideshow-initialized');
+                    }
+                }
+
+                // Visibility API optimization - pause when tab is not visible
+                document.addEventListener('visibilitychange', function() {
+                    const slideshowContainer = document.querySelector('.elephant-slideshow');
+                    if (slideshowContainer) {
+                        if (document.hidden) {
+                            // Pause slideshow when tab is hidden
+                            clearInterval(slideshowTimer);
+                        } else {
+                            // Resume slideshow when tab becomes visible
+                            if (!isTransitioning) {
+                                startSlideshow();
+                            }
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

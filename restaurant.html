@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Page title for browser tab and SEO -->
+        <title>Wine and Dine @the Zoo - Pine City Zoo</title>
+        <!-- Link to external CSS stylesheet for consistent styling -->
+        <link rel="stylesheet" href="css/style.css" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <style>
+            /* Full-screen background image for restaurant page */
+            body {
+                background-image: url('images/map-blur.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                min-height: 100vh;
+            }
+
+            /* Ensure main content area doesn't override the body background */
+            #main {
+                background-image: none;
+                background-color: transparent;
+            }
+
+            /* Basic header structure - detailed styling now in zoo-header-animations.css */
+            #header {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 80px;
+                z-index: 500;
+                text-align: center;
+            }
+
+            /* Logo basic positioning - hover effects in animation CSS */
+            #header img {
+                max-height: 70px;
+                margin: 5px 0;
+            }
+
+            /* Ensure top navigation tabs remain sticky */
+            #tabs-top {
+                position: fixed;
+                top: 80px;
+                width: 100%;
+                height: 50px;
+                background-color: #2a8d46;
+                z-index: 500;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Fixed header section containing the zoo logo -->
+        <div id="header">
+            <!-- Zoo logo image with alt text for accessibility -->
+            <img src="images/logo.png" alt="Pine City Zoo Logo">
+        </div>
+
+        <!-- Top navigation tabs for main sections -->
+        <div id="tabs-top">
+            <!-- Navigation links to main sections of the website -->
+            <a href="animals.html" class="nav-link">
+                <i class="fas fa-paw"></i>
+                <span>ANIMALS</span>
+            </a>
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-map"></i>
+                <span>MAP</span>
+            </a>
+            <a href="places.html" class="nav-link">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>PLACES</span>
+            </a>
+        </div>
+
+        <!-- Main content area with background styling -->
+        <div id="main">
+            <!-- Content container for proper spacing and layout -->
+            <div id="content">
+                <!-- Full-width info box for detailed place information -->
+                <div id="info-box-full">
+                    <!-- Large hero image of the restaurant -->
+                    <img src="images/outdoor_restaurant.jpg" alt="Wine and Dine @the Zoo Restaurant">
+
+                    <!-- Place title -->
+                    <h3>WINE AND DINE @THE ZOO</h3>
+
+                    <!-- Description of the restaurant -->
+                    <p>Experience fine dining in a truly unique setting at "Wine and Dine @the Zoo,"
+                        our premier restaurant offering gourmet cuisine in a beautiful outdoor environment.
+                        This upscale dining establishment provides the perfect opportunity to enjoy
+                        exceptional food while surrounded by the sights and sounds of nature.
+                    </p>
+
+                    <p>Our talented chefs create seasonal menus featuring locally sourced ingredients,
+                        sustainable seafood, and organic produce. The restaurant specializes in
+                        contemporary cuisine with international influences, offering everything from
+                        perfectly grilled steaks to fresh salads and vegetarian specialties. Our
+                        extensive wine list features selections from around the world, carefully
+                        chosen to complement our diverse menu.
+                    </p>
+
+                    <p>The restaurant's serene outdoor setting features elegant table settings,
+                        comfortable seating, and stunning views of the zoo's landscaped gardens.
+                        Whether you're celebrating a special occasion, enjoying a romantic dinner,
+                        or simply treating yourself to a memorable meal, Wine and Dine @the Zoo
+                        provides an unforgettable dining experience that combines culinary excellence
+                        with the magic of the natural world.
+                    </p>
+
+                    <!-- Back button nav to prev page -->
+                    <a class="info-box" href="places.html">Back</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom navigation tabs -->
+        <div id="tabs-bottom">
+            <!-- Links to weather and feedback sections -->
+            <a href="weather.html" class="nav-link">
+                <i class="fas fa-cloud-sun"></i>
+                <span>WEATHER</span>
+            </a>
+            <a href="feedback.html" class="nav-link">
+                <i class="fas fa-comments"></i>
+                <span>FEEDBACK</span>
+            </a>
+        </div>
+            <!-- Load the spectacular header animations -->
+        <script src="js/zoo_header_animations.js"></script>
+    </body>
+</html>

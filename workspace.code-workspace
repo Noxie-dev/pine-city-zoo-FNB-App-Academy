@@ -1,0 +1,30 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "editor.tabSize": 2,
+        "editor.detectIndentation": false,
+        "editor.formatOnSave": true,
+        "html.format.wrapLineLength": 100,
+        "html.format.preserveNewLines": true,
+        "files.associations": {
+            "*.html": "html",
+            "*.css": "css"
+        },
+        "liveServer.settings.port": 5500,
+        "liveServer.settings.root": "/",
+        "liveServer.settings.CustomBrowser": "chrome",
+        "liveServer.settings.donotShowInfoMsg": true
+    },
+    "extensions": {
+        "recommendations": [
+            "ritwickdey.liveserver",
+            "esbenp.prettier-vscode",
+            "ms-vscode.vscode-typescript-next",
+            "dbaeumer.vscode-eslint"
+        ]
+    }
+}

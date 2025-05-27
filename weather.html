@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pine City Weather</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="weather-background">
+        <div class="weather-overlay"></div>
+
+        <div id="header">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Pine City Logo">
+                <h1 class="site-title">Pine City Explorer</h1>
+            </div>
+        </div>
+
+        <nav id="tabs-top">
+            <a href="animals.html" class="nav-link">
+                <i class="fas fa-paw"></i>
+                <span>ANIMALS</span>
+            </a>
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-map"></i>
+                <span>MAP</span>
+            </a>
+            <a href="places.html" class="nav-link">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>PLACES</span>
+            </a>
+        </nav>
+
+        <main id="main">
+            <div id="content">
+                <div class="weather-container">
+                    <div class="current-weather-card">
+                        <div class="weather-header">
+                            <h2><i class="fas fa-map-marker-alt"></i> Pine City Weather</h2>
+                            <div class="date-time">
+                                <span class="current-date">Monday, May 26</span>
+                                <span class="current-time">2:30 PM</span>
+                            </div>
+                        </div>
+
+                        <div class="current-temp-section">
+                            <div class="main-temp-display">
+                                <img class="current-weather-icon" src="images/sunny.png" alt="Sunny">
+                                <div class="temp-info">
+                                    <h1 class="current-temp">22°</h1>
+                                    <p class="weather-description">Sunny &amp; Clear</p>
+                                </div>
+                            </div>
+
+                            <div class="temp-range">
+                                <div class="high-temp">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>25°</span>
+                                </div>
+                                <div class="low-temp">
+                                    <i class="fas fa-arrow-down"></i>
+                                    <span>16°</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="weather-details">
+                            <div class="detail-item">
+                                <i class="fas fa-eye"></i>
+                                <span>Visibility</span>
+                                <span>10 km</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-tint"></i>
+                                <span>Humidity</span>
+                                <span>45%</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-wind"></i>
+                                <span>Wind</span>
+                                <span>12 km/h</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="forecast-section">
+                        <h3 class="forecast-title">
+                            <i class="fas fa-calendar-alt"></i>
+                            7-Day Forecast
+                        </h3>
+
+                        <div class="forecast-grid">
+                            <div class="forecast-card today">
+                                <div class="day-name">Today</div>
+                                <img class="forecast-icon" src="images/sunny.png" alt="Sunny">
+                                <div class="forecast-desc">Sunny</div>
+                                <div class="forecast-temps">
+                                    <span class="high">25°</span>
+                                    <span class="low">16°</span>
+                                </div>
+                            </div>
+
+                            <div class="forecast-card">
+                                <div class="day-name">Tue</div>
+                                <img class="forecast-icon" src="images/rain.png" alt="Rainy">
+                                <div class="forecast-desc">Rainy</div>
+                                <div class="forecast-temps">
+                                    <span class="high">13°</span>
+                                    <span class="low">9°</span>
+                                </div>
+                            </div>
+
+                            <div class="forecast-card">
+                                <div class="day-name">Wed</div>
+                                <img class="forecast-icon" src="images/partly-cloudy.png" alt="Partly Cloudy">
+                                <div class="forecast-desc">Partly Cloudy</div>
+                                <div class="forecast-temps">
+                                    <span class="high">19°</span>
+                                    <span class="low">16°</span>
+                                </div>
+                            </div>
+
+                            <div class="forecast-card">
+                                <div class="day-name">Thu</div>
+                                <img class="forecast-icon" src="images/partly-cloudy.png" alt="Partly Cloudy">
+                                <div class="forecast-desc">Partly Cloudy</div>
+                                <div class="forecast-temps">
+                                    <span class="high">19°</span>
+                                    <span class="low">14°</span>
+                                </div>
+                            </div>
+
+                            <div class="forecast-card">
+                                <div class="day-name">Fri</div>
+                                <img class="forecast-icon" src="images/sunny.png" alt="Sunny">
+                                <div class="forecast-desc">Sunny</div>
+                                <div class="forecast-temps">
+                                    <span class="high">29°</span>
+                                    <span class="low">19°</span>
+                                </div>
+                            </div>
+
+                            <div class="forecast-card">
+                                <div class="day-name">Sat</div>
+                                <img class="forecast-icon" src="images/partly-cloudy.png" alt="Partly Cloudy">
+                                <div class="forecast-desc">Partly Cloudy</div>
+                                <div class="forecast-temps">
+                                    <span class="high">22°</span>
+                                    <span class="low">16°</span>
+                                </div>
+                            </div>
+
+                            <div class="forecast-card">
+                                <div class="day-name">Sun</div>
+                                <img class="forecast-icon" src="images/sunny.png" alt="Sunny">
+                                <div class="forecast-desc">Sunny</div>
+                                <div class="forecast-temps">
+                                    <span class="high">30°</span>
+                                    <span class="low">17°</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="weather-source">
+                        <i class="fas fa-info-circle"></i>
+                        Weather data provided by Weather.com
+                    </div>
+
+                    <a class="back-button" href="index.html">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Map
+                    </a>
+                </div>
+            </div>
+        </main>
+        <!-- Bottom navigation tabs -->
+        <div id="tabs-bottom">
+            <!-- Links to weather and feedback sections -->
+            <a href="weather.html" class="nav-link">
+                <i class="fas fa-cloud-sun"></i>
+                <span>WEATHER</span>
+            </a>
+            <a href="feedback.html" class="nav-link">
+                <i class="fas fa-comments"></i>
+                <span>FEEDBACK</span>
+            </a>
+        </div>
+
+        <div class="floating-elements">
+            <div class="cloud cloud1"></div>
+            <div class="cloud cloud2"></div>
+            <div class="sun-rays"></div>
+        </div>
+    </div>
+        <!-- Load the spectacular header animations -->
+        <script src="js/zoo_header_animations.js"></script>
+    </body>
+</html>

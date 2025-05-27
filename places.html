@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Places - Pine City Zoo</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <style>
+            /* Full-screen background image for places page */
+            body {
+                background-image: url('images/map-blur.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                min-height: 100vh;
+            }
+
+            /* Ensure main content area doesn't override the body background */
+            #main {
+                background-image: none;
+                background-color: transparent;
+            }
+
+            /* Header with wood background texture at 100% opacity */
+            #header {
+                position: relative;
+                background-color: #ffffff; /* Maintain white background as base */
+            }
+
+            /* Wood texture overlay using pseudo-element for opacity control */
+            #header::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: url('images/wood-bg.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                opacity: 1;  /* 100% opacity */
+                z-index: 1; /* Behind header content but above base background */
+                pointer-events: none; /* Ensure clicks pass through to header content */
+            }
+
+            /* Ensure header content (logo) appears above the wood texture */
+            #header img {
+                position: relative;
+                z-index: 2; /* Above the wood texture overlay */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <img src="images/logo.png" alt="Pine City Zoo Logo">
+        </div>
+        <div id="tabs-top">
+            <a href="animals.html" class="nav-link">
+                <i class="fas fa-paw"></i>
+                <span>ANIMALS</span>
+            </a>
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-map"></i>
+                <span>MAP</span>
+            </a>
+            <a href="places.html" class="nav-link active">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>PLACES</span>
+            </a>
+        </div>
+
+        <!-- Main content remains unchanged -->
+         <div id="main">
+            <!-- Content container for proper spacing and layout -->
+            <div id="content">
+
+                <!-- Amphitheater info box - clickable link to detail page -->
+                <a class="info-box" href="amphitheater.html">
+                    <!-- Thumbnail image for the amphitheater -->
+                    <img src="images/amphitheatre-tn.png" alt="Garden Amphitheater">
+                    <!-- Text content container for title and description -->
+                    <div class="text-content">
+                        <h3>Garden Amphitheater</h3>
+                        <p>Catch educational and entertaining events</p>
+                    </div>
+                    <!-- Right arrow indicating this is a clickable link -->
+                    <img class="right" src="images/next-arrow.png" alt="View details">
+                </a>
+
+                <!-- Insect House info box - clickable link to detail page -->
+                <a class="info-box" href="insect-house.html">
+                    <!-- Thumbnail image for the insect house -->
+                    <img src="images/insect-house-tn.png" alt="Insect House">
+                    <!-- Text content container for title and description -->
+                    <div class="text-content">
+                        <h3>Insect House</h3>
+                        <p>Creepy crawlies of every kind you can imagine</p>
+                    </div>
+                    <!-- Right arrow indicating this is a clickable link -->
+                    <img class="right" src="images/next-arrow.png" alt="View details">
+                </a>
+
+                <!-- Monkey Trail info box - clickable link to detail page -->
+                <a class="info-box" href="monkey-trail.html">
+                    <!-- Thumbnail image for the monkey trail -->
+                    <img src="images/monkey-trail-tn.png" alt="Monkey Trail">
+                    <!-- Text content container for title and description -->
+                    <div class="text-content">
+                        <h3>Monkey Trail</h3>
+                        <p>Take a walk or ride through this obstacle course</p>
+                    </div>
+                    <!-- Right arrow indicating this is a clickable link -->
+                    <img class="right" src="images/next-arrow.png" alt="View details">
+                </a>
+
+                <!-- Coffee Shop info box - clickable link to detail page -->
+                <a class="info-box" href="coffee-shop.html">
+                    <!-- Thumbnail image for the coffee shop -->
+                    <img src="images/coffee-shop-tn.png" alt="Coffee Shop">
+                    <!-- Text content container for title and description -->
+                    <div class="text-content">
+                        <h3>You Wild Thing Coffee Shop</h3>
+                        <p>Enjoy a wild cappuccino or a bushy dessert here</p>
+                    </div>
+                    <!-- Right arrow indicating this is a clickable link -->
+                    <img class="right" src="images/next-arrow.png" alt="View details">
+                </a>
+
+                <!-- Lost Forest info box - clickable link to detail page -->
+                <a class="info-box" href="lost-forest.html">
+                    <!-- Thumbnail image for the lost forest -->
+                    <img src="images/lost-forest-tn.png" alt="Lost Forest">
+                    <!-- Text content container for title and description -->
+                    <div class="text-content">
+                        <h3>Lost Forest</h3>
+                        <p>Setup a picnic under the trees and let your imagination run free</p>
+                    </div>
+                    <!-- Right arrow indicating this is a clickable link -->
+                    <img class="right" src="images/next-arrow.png" alt="View details">
+                </a>
+
+                <!-- Pizza Shop info box - clickable link to detail page -->
+                <a class="info-box" href="pizza-shop.html">
+                    <!-- Thumbnail image for the pizza shop -->
+                    <img src="images/pizza-shop-tn.png" alt="Pizza Shop">
+                    <!-- Text content container for title and description -->
+                    <div class="text-content">
+                        <h3>Fire Stone Pizza</h3>
+                        <p>Double crust, double the topping for the whole family</p>
+                    </div>
+                    <!-- Right arrow indicating this is a clickable link -->
+                    <img class="right" src="images/next-arrow.png" alt="View details">
+                </a>
+
+                <!-- Restaurant info box - clickable link to detail page -->
+                <a class="info-box" href="restaurant.html">
+                    <!-- Thumbnail image for the restaurant -->
+                    <img src="images/restaurant-tn.png" alt="Restaurant">
+                    <!-- Text content container for title and description -->
+                    <div class="text-content">
+                        <h3>Wine and Dine @the Zoo</h3>
+                        <p>Gourmet meals in serene outdoor setting</p>
+                    </div>
+                    <!-- Right arrow indicating this is a clickable link -->
+                    <img class="right" src="images/next-arrow.png" alt="View details">
+                </a>
+
+                <!-- Jungle Gym info box - clickable link to detail page -->
+                <a class="info-box" href="jungle-gym.html">
+                    <!-- Thumbnail image for the jungle gym -->
+                    <img src="images/monkey-see-tn.png" alt="Jungle Gym">
+                    <!-- Text content container for title and description -->
+                    <div class="text-content">
+                        <h3>Monkey See Monkey Do Jungle Gym</h3>
+                        <p>A safe space for kids to play and explore</p>
+                    </div>
+                    <!-- Right arrow indicating this is a clickable link -->
+                    <img class="right" src="images/next-arrow.png" alt="View details">
+                </a>
+
+            </div>
+        </div>
+
+        <div id="tabs-bottom">
+            <a href="weather.html" class="nav-link">
+                <i class="fas fa-cloud-sun"></i>
+                <span>WEATHER</span>
+            </a>
+            <a href="feedback.html" class="nav-link">
+                <i class="fas fa-comments"></i>
+                <span>FEEDBACK</span>
+            </a>
+        </div>
+
+        <!-- Load the spectacular header animations -->
+        <script src="js/zoo_header_animations.js"></script>
+    </body>
+</html>

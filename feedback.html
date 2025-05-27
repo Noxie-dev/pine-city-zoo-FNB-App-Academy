@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Feedback - Pine City Zoo</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    </head>
+    <body class="feedback-page">
+        <div id="header">
+            <img src="images/logo.png" alt="Pine City Zoo Logo">
+        </div>
+        <div id="tabs-top">
+            <a href="animals.html" class="nav-link">
+                <i class="fas fa-paw"></i>
+                <span>ANIMALS</span>
+            </a>
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-map"></i>
+                <span>MAP</span>
+            </a>
+            <a href="places.html" class="nav-link">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>PLACES</span>
+            </a>
+        </div>
+
+        <!-- Main content area with background styling -->
+        <div id="main">
+            <!-- Content container for proper spacing and layout -->
+            <div id="content">
+                <!-- Full-width info box for feedback form -->
+                <div id="info-box-full">
+                    <!-- Feedback page hero image -->
+                    <img src="images/giraffe-large.jpg" alt="Giraffe at Pine City Zoo">
+
+                    <!-- Feedback page title -->
+                    <h2 class="feedback-title">SHARE YOUR EXPERIENCE</h2>
+
+                    <!-- Feedback introduction text -->
+                    <p class="feedback-intro">
+                        We value your feedback! Please take a moment to share your thoughts about your visit to Pine City Zoo.
+                        Your comments help us improve our facilities and provide the best possible experience for all our visitors.
+                    </p>
+
+                    <!-- Feedback form -->
+                    <form id="feedback-form" action="thank-you.html" method="post">
+                        <!-- Name field -->
+                        <div class="form-group">
+                            <label for="visitor-name">Your Name *</label>
+                            <input type="text" id="visitor-name" name="visitor-name" required>
+                        </div>
+
+                        <!-- Email field -->
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <!-- Visit date field -->
+                        <div class="form-group">
+                            <label for="visit-date">Date of Visit</label>
+                            <input type="date" id="visit-date" name="visit-date">
+                        </div>
+
+                        <!-- Rating field -->
+                        <div class="form-group">
+                            <label>Overall Experience Rating *</label>
+                            <div class="rating">
+                                <input type="radio" id="star5" name="rating" value="5" required>
+                                <label for="star5">★</label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4">★</label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3">★</label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2">★</label>
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1">★</label>
+                            </div>
+                        </div>
+
+                        <!-- Comments field -->
+                        <div class="form-group">
+                            <label for="comments">Comments and Suggestions *</label>
+                            <textarea id="comments" name="comments" rows="6" placeholder="Please share your thoughts about your visit, favorite animals, suggestions for improvement, or any other feedback..." required></textarea>
+                        </div>
+
+                        <!-- Contact preference -->
+                        <div class="form-group">
+                            <label for="contact-preference">Would you like us to respond to your feedback?</label>
+                            <select id="contact-preference" name="contact-preference">
+                                <option value="no">No response needed</option>
+                                <option value="email">Yes, please email me</option>
+                                <option value="phone">Yes, please call me</option>
+                            </select>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="submit-button">Submit Feedback</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="tabs-bottom">
+            <a href="weather.html" class="nav-link">
+                <i class="fas fa-cloud-sun"></i>
+                <span>WEATHER</span>
+            </a>
+            <a href="feedback.html" class="nav-link active">
+                <i class="fas fa-comments"></i>
+                <span>FEEDBACK</span>
+            </a>
+        </div>
+            <!-- Load the spectacular header animations -->
+        <script src="js/zoo_header_animations.js"></script>
+    </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Page title for browser tab and SEO -->
+        <title>Monkey See Monkey Do Jungle Gym - Pine City Zoo</title>
+        <!-- Link to external CSS stylesheet for consistent styling -->
+        <link rel="stylesheet" href="css/style.css" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <style>
+            /* Full-screen background image for jungle gym page */
+            body {
+                background-image: url('images/map-blur.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                min-height: 100vh;
+            }
+
+            /* Ensure main content area doesn't override the body background */
+            #main {
+                background-image: none;
+                background-color: transparent;
+            }
+
+            /* Basic header structure - detailed styling now in zoo-header-animations.css */
+            #header {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 80px;
+                z-index: 500;
+                text-align: center;
+            }
+
+            /* Logo basic positioning - hover effects in animation CSS */
+            #header img {
+                max-height: 70px;
+                margin: 5px 0;
+            }
+
+            /* Ensure top navigation tabs remain sticky */
+            #tabs-top {
+                position: fixed;
+                top: 80px;
+                width: 100%;
+                height: 50px;
+                background-color: #2a8d46;
+                z-index: 500;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Fixed header section containing the zoo logo -->
+        <div id="header">
+            <!-- Zoo logo image with alt text for accessibility -->
+            <img src="images/logo.png" alt="Pine City Zoo Logo">
+        </div>
+
+         <!-- Top navigation tabs for main sections -->
+<div id="tabs-top">
+    <!-- Navigation links to main sections of the website -->
+    <a href="animals.html" class="nav-link">
+        <i class="fas fa-paw"></i>
+        <span>ANIMALS</span>
+    </a>
+    <a href="index.html" class="nav-link">
+        <i class="fas fa-map"></i>
+        <span>MAP</span>
+    </a>
+    <a href="places.html" class="nav-link">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>PLACES</span>
+    </a>
+</div>
+
+        <!-- Main content area with background styling -->
+        <div id="main">
+            <!-- Content container for proper spacing and layout -->
+            <div id="content">
+                <!-- Full-width info box for detailed place information -->
+                <div id="info-box-full">
+                    <!-- Large hero image of the jungle gym -->
+                    <img src="images/jungle-gym.png" alt="Monkey See Monkey Do Jungle Gym at Pine City Zoo">
+
+                    <!-- Place title in uppercase for consistency -->
+                    <h3>MONKEY SEE MONKEY DO JUNGLE GYM</h3>
+
+                    <!-- Detailed description of the jungle gym -->
+                    <p>Let your little ones swing into action at the "Monkey See Monkey Do Jungle Gym,"
+                        our exciting playground designed to let children experience what it's like to
+                        move and play like their favorite primates. This safe, supervised play area
+                        provides endless entertainment while encouraging physical activity and
+                        imaginative play.
+                    </p>
+
+                    <p>The jungle gym features rope climbing structures, swinging elements, balance
+                        beams, and tunnels that mimic the natural movements of monkeys and apes.
+                        All equipment is designed with safety as the top priority, featuring soft
+                        landing surfaces, age-appropriate challenges, and clear sight lines for
+                        parents to supervise their children.
+                    </p>
+
+                    <p>Educational elements are woven throughout the play area, with fun facts about
+                        primate behavior and movement displayed on colorful signs. Children can learn
+                        about how different primates use their arms, legs, and tails to navigate
+                        through trees while having a blast on the equipment. The playground is
+                        suitable for children ages 3-12 and provides a perfect energy outlet during
+                        your zoo visit.
+                    </p>
+
+                    <!-- Back button nav to prev page -->
+                    <a class="info-box" href="places.html">Back</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom navigation tabs -->
+<div id="tabs-bottom">
+    <!-- Links to weather and feedback sections -->
+    <a href="weather.html" class="nav-link">
+        <i class="fas fa-cloud-sun"></i>
+        <span>WEATHER</span>
+    </a>
+    <a href="feedback.html" class="nav-link">
+        <i class="fas fa-comments"></i>
+        <span>FEEDBACK</span>
+    </a>
+</div>
+            <!-- Load the spectacular header animations -->
+        <script src="js/zoo_header_animations.js"></script>
+    </body>
+</html>

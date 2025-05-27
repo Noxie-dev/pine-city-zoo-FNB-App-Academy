@@ -1,0 +1,27 @@
+{
+  "defaults": {
+    "timeout": 20000,
+    "wait": 500,
+    "chromeLaunchConfig": {
+      "ignoreHTTPSErrors": false
+    },
+    "standard": "WCAG2AA",
+    "ignore": [
+      "WCAG2AA.Principle1.Guideline1_3.1_3_1.H44.NonExistentFragment"
+    ]
+  },
+  "urls": [
+    "http://localhost:8080/index.html",
+    "http://localhost:8080/animals.html",
+    "http://localhost:8080/elephant.html",
+    "http://localhost:8080/giraffe.html",
+    "http://localhost:8080/lion.html",
+    "http://localhost:8080/panda.html",
+    "http://localhost:8080/gorilla.html",
+    "http://localhost:8080/hippo.html",
+    "http://localhost:8080/monkey.html",
+    "http://localhost:8080/warthog.html",
+    "http://localhost:8080/gemsbok.html",
+    "http://localhost:8080/Koala.html"
+  ]
+}

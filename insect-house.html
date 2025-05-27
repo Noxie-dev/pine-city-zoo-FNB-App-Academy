@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Page title for browser tab and SEO -->
+        <title>Insect House - Pine City Zoo</title>
+        <!-- Link to external CSS stylesheet for consistent styling -->
+        <link rel="stylesheet" href="css/style.css" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <style>
+            /* Full-screen background image for insect house page */
+            body {
+                background-image: url('images/map-blur.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                min-height: 100vh;
+            }
+
+            /* Ensure main content area doesn't override the body background */
+            #main {
+                background-image: none;
+                background-color: transparent;
+            }
+
+            /* Basic header structure - detailed styling now in zoo-header-animations.css */
+            #header {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 80px;
+                z-index: 500;
+                text-align: center;
+            }
+
+            /* Logo basic positioning - hover effects in animation CSS */
+            #header img {
+                max-height: 70px;
+                margin: 5px 0;
+            }
+
+            /* Ensure top navigation tabs remain sticky */
+            #tabs-top {
+                position: fixed;
+                top: 80px;
+                width: 100%;
+                height: 50px;
+                background-color: #2a8d46;
+                z-index: 500;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Fixed header section containing the zoo logo -->
+        <div id="header">
+            <!-- Zoo logo image with alt text for accessibility -->
+            <img src="images/logo.png" alt="Pine City Zoo Logo">
+        </div>
+
+        <!-- Top navigation tabs for main sections -->
+<div id="tabs-top">
+    <!-- Navigation links to main sections of the website -->
+    <a href="animals.html" class="nav-link">
+        <i class="fas fa-paw"></i>
+        <span>ANIMALS</span>
+    </a>
+    <a href="index.html" class="nav-link">
+        <i class="fas fa-map"></i>
+        <span>MAP</span>
+    </a>
+    <a href="places.html" class="nav-link">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>PLACES</span>
+    </a>
+</div>
+        <!-- Main content area with background styling -->
+        <div id="main">
+            <!-- Content container for proper spacing and layout -->
+            <div id="content">
+                <!-- Full-width info box for detailed place information -->
+                <div id="info-box-full">
+                    <!-- Large hero image of the insect house -->
+                    <img src="images/rhino-beetle.jpg" alt="Rhino Beetle at the Insect House">
+
+                    <!-- Place title in uppercase for consistency -->
+                    <h3>INSECT HOUSE</h3>
+
+                    <!-- Description of the insect house -->
+                    <p>Step into the fascinating world of insects and arthropods at our state-of-the-art
+                        Insect House. This climate-controlled facility houses an incredible collection of
+                        creepy crawlies from around the globe, showcasing the amazing diversity and
+                        importance of these often misunderstood creatures.
+                    </p>
+
+                    <p>Our exhibits feature everything from colorful butterflies and massive beetles to
+                        intricate spider webs and busy ant colonies. Interactive displays and educational
+                        panels help visitors understand the crucial role insects play in our ecosystem,
+                        from pollination to decomposition and pest control.
+                    </p>
+
+                    <p>Highlights include our butterfly garden where tropical species flutter freely,
+                        the tarantula habitat featuring gentle giants from South America, and our
+                        working beehive where you can observe thousands of bees in action behind
+                        protective glass. Don't miss the daily feeding demonstrations and the chance
+                        to hold some of our friendlier residents!
+                    </p>
+
+                    <!-- External link button for more information -->
+                    <a class="info-box" href="places.html">Back</a>
+                </div>
+            </div>
+        </div>
+
+       <!-- Bottom navigation tabs -->
+  <div id="tabs-bottom">
+    <!-- Links to weather and feedback sections -->
+        <a href="weather.html" class="nav-link">
+        <i class="fas fa-cloud-sun"></i>
+        <span>WEATHER</span>
+        </a>
+        <a href="feedback.html" class="nav-link">
+        <i class="fas fa-comments"></i>
+        <span>FEEDBACK</span>
+        </a>
+      </div>
+            <!-- Load the spectacular header animations -->
+        <script src="js/zoo_header_animations.js"></script>
+    </body>
+</html>

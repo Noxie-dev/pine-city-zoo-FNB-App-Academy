@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Animals - Pine City Zoo</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <style>
+            /* Full-screen background image for animals page */
+            body {
+                background-image: url('images/map-blur.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                min-height: 100vh;
+            }
+
+            /* Ensure main content area doesn't override the body background */
+            #main {
+                background-image: none;
+                background-color: transparent;
+            }
+
+            /* Basic header structure - detailed styling now in zoo-header-animations.css */
+            #header {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                height: 80px;
+                z-index: 500;
+                text-align: center;
+            }
+
+            /* Logo basic positioning - hover effects in animation CSS */
+            #header img {
+                max-height: 70px;
+                margin: 5px 0;
+            }
+
+            /* Ensure top navigation tabs remain sticky */
+            #tabs-top {
+                position: fixed;
+                top: 80px;
+                width: 100%;
+                height: 50px;
+                background-color: #2a8d46;
+                z-index: 500;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- SPECTACULAR ANIMATED HEADER -->
+        <div id="header">
+            <img src="images/logo.png" alt="Pine City Zoo Logo">
+            <!-- All animated elements will be dynamically created by JavaScript -->
+        </div>
+
+        <div id="tabs-top">
+            <a href="animals.html" class="nav-link active">
+                <i class="fas fa-paw"></i>
+                <span>ANIMALS</span>
+            </a>
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-map"></i>
+                <span>MAP</span>
+            </a>
+            <a href="places.html" class="nav-link">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>PLACES</span>
+            </a>
+        </div>
+
+        <div id="main">
+            <div id="content">
+                <a class="info-box" href="elephant.html">
+                    <img src="images/elephant-tn.png" alt="Elephant thumbnail">
+                    <div class="text-content">
+                        <h3>Elephant</h3>
+                        <p>Gentle giant of the jungle</p>
+                    </div>
+                    <img class="right" src="images/next-arrow.png" alt="Next arrow">
+                </a>
+                <a class="info-box" href="gemsbok.html">
+                    <img src="images/gemsbok-tn.png" alt="Gemsbok thumbnail">
+                    <div class="text-content">
+                        <h3>Gemsbok</h3>
+                        <p>African antelope</p>
+                    </div>
+                    <img class="right" src="images/next-arrow.png" alt="Next arrow">
+                </a>
+                <a class="info-box" href="giraffe.html">
+                    <img src="images/giraffe-tn.png" alt="Giraffe thumbnail">
+                    <div class="text-content">
+                        <h3>Giraffe</h3>
+                        <p>Daddy long neck</p>
+                    </div>
+                    <img class="right" src="images/next-arrow.png" alt="Next arrow">
+                </a>
+                <a class="info-box" href="gorilla.html">
+                    <img src="images/gorilla-tn.png" alt="Gorilla thumbnail">
+                    <div class="text-content">
+                        <h3>Gorilla</h3>
+                        <p>The great ape</p>
+                    </div>
+                    <img class="right" src="images/next-arrow.png" alt="Next arrow">
+                </a>
+                <a class="info-box" href="hippo.html">
+                    <img src="images/hippo-tn.png" alt="Hippo thumbnail">
+                    <div class="text-content">
+                        <h3>Hippo</h3>
+                        <p>The African water horse</p>
+                    </div>
+                    <img class="right" src="images/next-arrow.png" alt="Next arrow">
+                </a>
+                <a class="info-box" href="Koala.html">
+                    <img src="images/koala-tn.png" alt="Koala thumbnail">
+                    <div class="text-content">
+                        <h3>Koala</h3>
+                        <p>Australian marsupial</p>
+                    </div>
+                    <img class="right" src="images/next-arrow.png" alt="Next arrow">
+                </a>
+                <a class="info-box" href="lion.html">
+                    <img src="images/lion-tn.png" alt="Lion thumbnail">
+                    <div class="text-content">
+                        <h3>Lion</h3>
+                        <p>King of the jungle</p>
+                    </div>
+                    <img class="right" src="images/next-arrow.png" alt="Next arrow">
+                </a>
+                <a class="info-box" href="monkey.html">
+                    <img src="images/monkey-tn.png" alt="Monkey thumbnail">
+                    <div class="text-content">
+                        <h3>Monkey</h3>
+                        <p>Primates</p>
+                    </div>
+                    <img class="right" src="images/next-arrow.png" alt="Next arrow">
+                </a>
+                <a class="info-box" href="panda.html">
+                    <img src="images/panda-tn.png" alt="Panda thumbnail">
+                    <div class="text-content">
+                        <h3>Panda</h3>
+                        <p>Black and white fluffy bear</p>
+                    </div>
+                    <img class="right" src="images/next-arrow.png" alt="Next arrow">
+                </a>
+                <a class="info-box" href="warthog.html">
+                    <img src="images/warthog-tn.png" alt="Warthog thumbnail">
+                    <div class="text-content">
+                        <h3>Warthog</h3>
+                        <p>Pigs of the savanna with tusks</p>
+                    </div>
+                    <img class="right" src="images/next-arrow.png" alt="Next arrow">
+                </a>
+            </div>
+        </div>
+
+        <!-- Bottom navigation tabs -->
+        <div id="tabs-bottom">
+            <a href="weather.html" class="nav-link">
+                <i class="fas fa-cloud-sun"></i>
+                <span>WEATHER</span>
+            </a>
+            <a href="feedback.html" class="nav-link">
+                <i class="fas fa-comments"></i>
+                <span>FEEDBACK</span>
+            </a>
+        </div>
+
+        <!-- Load the spectacular header animations -->
+        <script src="js/zoo_header_animations.js"></script>
+    </body>
+</html>

@@ -1,0 +1,1798 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+/*======================== Header =========================*/
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    z-index: 500;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#header img {
+    max-height: 70px;
+    margin: 5px 0;
+}
+
+/*======================== Tabs ========================*/
+
+#tabs-top, #tabs-bottom {
+    width: 100%;
+    height: 50px;
+    background-color: #2a8d46;
+    overflow: auto;
+}
+
+#tabs-top {
+    position: fixed;
+    top: 80px;
+    z-index: 500;
+}
+
+#tabs-bottom {
+    position: fixed;
+    bottom: 0;
+    z-index: 500;
+}
+
+/* Navigation link styling with icons */
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Icon styling in navigation */
+.nav-link i {
+    margin-bottom: 3px;
+    font-size: 16px;
+}
+
+/* Text styling in navigation */
+.nav-link span {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* Active state for navigation links */
+.nav-link.active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Bottom tabs have only two links */
+#tabs-bottom .nav-link {
+    width: 50%;
+}
+
+/*======================== Main-home ========================*/
+#main-home {
+    position: absolute;
+    top: 120px; /* Exactly header (80px) + tabs (40px) */
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#main-home img {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.responsive-map {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*======================== Tabs-bottom ========================*/
+
+#tabs-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 40px;
+    background-color: forestgreen;
+}
+
+#tabs-bottom a{
+    float: left;
+    display: block;
+    width: 50%;
+    height: 35%;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 12px;
+}
+
+/*======================== Main ========================*/
+
+#main {
+    margin-top: 130px;
+    margin-bottom: 60px;
+    background-image: url('images/background.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+}
+
+#content {
+    padding: 20px 15px 60px 15px; /* Added bottom padding for bottom tabs */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/*======================== Info Box ========================*/
+/* Updated layout fix for arrow positioning */
+
+a.info-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.8);
+    margin: 10px 0;
+    padding: 15px 45px 15px 30px; /* Right padding for arrow space */
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.info-box img:not(.right) {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.info-box img.right {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    opacity: 0.8;
+    flex: none; /* Ensure it doesn't participate in flex layout */
+    pointer-events: none; /* Prevent interference with click events */
+}
+
+.info-box .text-content {
+    flex: 1;
+}
+
+.info-box h3 {
+    margin: 10px 0 8px 0;
+    color: #1a3d20;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.info-box p {
+    margin: 0;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.3;
+}
+/*======================== Info Box Full ========================*/
+
+#info-box-full {
+    background: rgba(255,255,255,0.8);
+    width: 90%;                   /* Controls width relative to container */
+    max-width: 1200px;             /* Increased from 800px for wider display on large screens */
+    display: flex;
+    margin: 12px auto;            /* Auto horizontal margins for perfect centering */
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-sizing: border-box;       /* Ensures padding is included in width calculation */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+#info-box-full img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+#info-box-full h3 {
+    margin: 10px 0 8px 0;
+    color: #1a3d20;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+#info-box-full p {
+    margin: 0;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+/*======================== Learn More Button ========================*/
+
+#info-box-full a.info-box {
+    /* Control button size */
+    width: 200px;                /* Sets the button width */
+    height: 45px;                /* Sets the button height */
+
+    /* Text styling */
+    color: white;                /* Sets text color to white */
+    font-weight: 700;            /* Makes text bold */
+    font-size: 18px;             /* Sets text size */
+
+    /* Button appearance */
+    background-color: #2a8d46;   /* Lighter green background color (was #1a3d20) */
+    border-radius: 25px;         /* Rounded corners (higher = more rounded) */
+    border: 2px solid #2a8d46;   /* Border matching the background */
+
+    /* Layout and positioning */
+    display: flex;               /* Uses flexbox for centering content */
+    justify-content: center;     /* Centers text horizontally */
+    align-items: center;         /* Centers text vertically */
+    text-decoration: none;       /* Removes underline from link */
+    margin: 20px auto 10px;      /* Adds space around button (top, sides, bottom) */
+
+    /* Smooth transition for hover effects */
+    transition: all 0.3s ease;   /* Makes all changes smooth over 0.3 seconds */
+
+    /* Glowing border effect */
+    box-shadow: 0 0 8px #2a8d46; /* Creates a subtle glow around the button */
+}
+
+/* Hover effect - changes appearance when mouse hovers over button */
+#info-box-full a.info-box:hover {
+    background-color: #1a3d20;   /* Darker green on hover (was #2a8d46) */
+    color: white;                /* Keeps text white */
+    transform: scale(1.05);      /* Makes button slightly larger on hover */
+    box-shadow: 0 0 15px #2a8d46; /* Increases the glow effect on hover */
+}
+
+/* Active effect - changes appearance when button is clicked */
+#info-box-full a.info-box:active {
+    transform: scale(0.98);      /* Slightly shrinks button when clicked */
+    box-shadow: 0 0 5px #2a8d46; /* Reduces glow when clicked */
+}
+
+/*======================== Weather Page ========================*/
+/* This section contains all styles specific to the weather.html page */
+
+/*
+ * Main weather page container
+ * Creates a full-height container with overflow handling
+ * to properly contain the animated background elements
+ */
+.weather-background {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/*
+ * Semi-transparent gradient overlay
+ * Creates a sky-blue gradient background that matches the nature theme
+ * of the Pine City Zoo while providing good contrast for content
+ */
+.weather-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #87ceeb, #e0f7fa); /* Sky blue gradient */
+    opacity: 0.7; /* Semi-transparent to allow background elements to show through */
+    z-index: -1; /* Positioned behind content */
+}
+
+/*
+ * Main container for all weather content
+ * Provides consistent padding and maximum width
+ * Centered layout matches other content pages in the site
+ */
+.weather-container {
+    padding: 15px;
+    max-width: 800px; /* Consistent with other content max-widths */
+    margin: 0 auto; /* Center the container */
+}
+
+/*
+ * Current weather information card
+ * Uses the same card styling approach as info boxes elsewhere in the site
+ * Semi-transparent white background with rounded corners and subtle shadow
+ */
+.current-weather-card {
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+    border-radius: 8px; /* Rounded corners matching other site elements */
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/*
+ * Header section of the weather card
+ * Contains location title and current date/time
+ * Uses flexbox for responsive layout
+ */
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0; /* Subtle separator */
+    padding-bottom: 10px;
+}
+
+/*
+ * Location title styling
+ * Uses the same dark green color as headings throughout the site
+ * Includes icon alignment
+ */
+.weather-header h2 {
+    color: #1a3d20; /* Dark green color from site palette */
+    font-size: 22px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Icon in the header - uses the site's accent green color */
+.weather-header h2 i {
+    margin-right: 8px;
+    color: #2a8d46; /* Accent green color from site palette */
+}
+
+/*
+ * Date and time display
+ * Right-aligned for visual balance
+ * Stacked vertically using flexbox
+ */
+.date-time {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 14px;
+    color: #555; /* Subdued text color for secondary information */
+}
+
+/*
+ * Current temperature display section
+ * Uses flexbox for layout with temperature on left and range on right
+ * Responsive design will stack these on smaller screens
+ */
+.current-temp-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/*
+ * Main temperature display with weather icon
+ * Horizontal layout using flexbox
+ */
+.main-temp-display {
+    display: flex;
+    align-items: center;
+}
+
+/* Weather condition icon sizing */
+.current-weather-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+
+/* Container for temperature text and description */
+.temp-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+ * Current temperature value
+ * Large, bold font with the site's dark green color
+ * Matches the prominent heading style elsewhere in the site
+ */
+.current-temp {
+    font-size: 48px;
+    font-weight: 800; /* Extra bold weight for emphasis */
+    margin: 0;
+    color: #1a3d20; /* Dark green from site palette */
+}
+
+/* Weather condition text description */
+.weather-description {
+    margin: 0;
+    color: #555;
+    font-size: 16px;
+}
+
+/*
+ * High/low temperature range display
+ * Right-aligned column layout
+ * Will change to row layout on mobile for better space usage
+ */
+.temp-range {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+/* Common styling for high and low temperature displays */
+.high-temp, .low-temp {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 5px 0;
+}
+
+/* Icon spacing for temperature indicators */
+.high-temp i, .low-temp i {
+    margin-right: 5px;
+}
+
+/*
+ * High temperature - uses red color for intuitive heat indication
+ * Color psychology: red = hot
+ */
+.high-temp {
+    color: #e53935; /* Warm red color */
+}
+
+/*
+ * Low temperature - uses blue color for intuitive cold indication
+ * Color psychology: blue = cold
+ */
+.low-temp {
+    color: #1565c0; /* Cool blue color */
+}
+
+/*
+ * Weather details section (humidity, wind, visibility)
+ * Uses a light green background to match the site's color scheme
+ * Flexbox layout divides space equally between items
+ */
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(42, 141, 70, 0.1); /* Very light green background */
+    border-radius: 8px;
+    padding: 15px;
+}
+
+/*
+ * Individual weather detail item
+ * Centered column layout with icon on top
+ * Each item gets equal space using flex: 1
+ */
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* Equal width distribution */
+}
+
+/* Icons for weather details - uses the site's accent green */
+.detail-item i {
+    font-size: 20px;
+    color: #2a8d46; /* Accent green from site palette */
+    margin-bottom: 5px;
+}
+
+/*
+ * 7-day forecast section
+ * Uses the same card styling as the current weather card
+ * for visual consistency
+ */
+.forecast-section {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*
+ * Forecast section title
+ * Matches the styling of other section headings in the site
+ */
+.forecast-title {
+    color: #1a3d20; /* Dark green from site palette */
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+/* Icon in forecast title */
+.forecast-title i {
+    margin-right: 8px;
+    color: #2a8d46; /* Accent green from site palette */
+}
+
+/*
+ * Grid layout for forecast cards
+ * Uses CSS Grid for responsive layout that works across device sizes
+ * Will automatically adjust number of columns based on available width
+ */
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid */
+    gap: 10px;
+}
+
+/*
+ * Individual day forecast card
+ * Simple white card with subtle shadow
+ * Smaller version of the main weather card design
+ */
+.forecast-card {
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/*
+ * Today's forecast card - highlighted
+ * Uses light green background to indicate current day
+ */
+.forecast-card.today {
+    background: rgba(42, 141, 70, 0.1); /* Very light green background */
+}
+
+/* Day name in forecast card */
+.day-name {
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #1a3d20; /* Dark green from site palette */
+}
+
+/* Weather icon in forecast card */
+.forecast-icon {
+    width: 40px;
+    height: 40px;
+    margin: 5px auto;
+}
+
+/* Weather description text in forecast card */
+.forecast-desc {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/*
+ * Temperature range in forecast card
+ * Uses flexbox for horizontal layout
+ */
+.forecast-temps {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+/* High temperature in forecast - red for heat */
+.forecast-temps .high {
+    color: #e53935; /* Warm red color */
+}
+
+/* Low temperature in forecast - blue for cold */
+.forecast-temps .low {
+    color: #1565c0; /* Cool blue color */
+}
+
+/*
+ * Weather data attribution
+ * Small, centered text with subtle color
+ */
+.weather-source {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Icon in weather source text */
+.weather-source i {
+    margin-right: 5px;
+}
+
+/*
+ * Back button to return to map
+ * Uses the same button styling as elsewhere in the site
+ * Green background with white text and rounded corners
+ */
+.back-button {
+    display: block;
+    width: 150px;
+    margin: 0 auto 20px;
+    padding: 10px 15px;
+    background-color: #2a8d46; /* Accent green from site palette */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px; /* Highly rounded corners for button */
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/*
+ * Hover effect for back button
+ * Darkens the button and slightly enlarges it
+ * Provides visual feedback for interactive element
+ */
+.back-button:hover {
+    background-color: #1a3d20; /* Darker green on hover */
+    transform: scale(1.05); /* Slight enlargement for emphasis */
+}
+
+/* Icon in back button */
+.back-button i {
+    margin-right: 5px;
+}
+
+/*
+ * Container for decorative animated elements
+ * Positioned behind content but above the gradient background
+ * Uses pointer-events: none to prevent interference with user interaction
+ */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevents elements from interfering with clicks */
+    z-index: -1; /* Behind content */
+}
+
+/*
+ * Base cloud styling
+ * Creates rounded rectangle shape for cloud base
+ */
+.cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+}
+
+/*
+ * First cloud instance
+ * Positioned in top left area and animated to move right
+ * Larger size for visual variety
+ */
+.cloud1 {
+    width: 200px;
+    height: 60px;
+    top: 20%;
+    left: 10%;
+    animation: float 30s linear infinite; /* Continuous horizontal movement */
+}
+
+/*
+ * Second cloud instance
+ * Positioned in top right area and animated to move left
+ * Smaller size for visual variety
+ */
+.cloud2 {
+    width: 150px;
+    height: 45px;
+    top: 30%;
+    right: 15%;
+    animation: float 25s linear infinite reverse; /* Reverse direction */
+}
+
+/*
+ * Decorative sun rays effect
+ * Uses radial gradient for glowing effect
+ * Animated to pulse for visual interest
+ */
+.sun-rays {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    width: 100px;
+    height: 100px;
+    /* Radial gradient creates fading glow effect */
+    background: radial-gradient(circle, rgba(255, 236, 95, 0.8) 0%, rgba(255, 236, 95, 0) 70%);
+    border-radius: 50%;
+    animation: pulse 5s ease-in-out infinite; /* Pulsing animation */
+}
+
+/*
+ * Cloud floating animation
+ * Moves clouds horizontally across the screen
+ * Uses translateX for better performance than left/right properties
+ * calc() ensures clouds move completely off-screen before resetting
+ */
+@keyframes float {
+    0% { transform: translateX(-100px); } /* Start off-screen left */
+    100% { transform: translateX(calc(100vw + 100px)); } /* End off-screen right */
+}
+
+/*
+ * Sun rays pulsing animation
+ * Alternates between normal and slightly enlarged size
+ * Also varies opacity for more natural effect
+ */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+/*
+ * Responsive design adjustments for smaller screens
+ * Changes layouts from horizontal to vertical where appropriate
+ * Adjusts spacing and sizing for better mobile experience
+ */
+@media (max-width: 768px) {
+    /* Stack header elements vertically */
+    .weather-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Left-align date/time on mobile */
+    .date-time {
+        text-align: left;
+        margin-top: 5px;
+    }
+
+    /* Stack temperature display and range vertically */
+    .current-temp-section {
+        flex-direction: column;
+    }
+
+    /* Change temp range from column to row layout on mobile */
+    .temp-range {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    /* Stack weather details vertically on mobile */
+    .weather-details {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Reduce forecast card minimum width for smaller screens */
+    .forecast-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+}
+
+/*
+ * Header logo container for weather page
+ * Uses flexbox for horizontal alignment of logo and site title
+ */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Logo image sizing and spacing */
+.logo-container img {
+    height: 60px;
+    margin-right: 10px;
+    padding-top: 0; /* Override default header img padding */
+}
+
+/*
+ * Site title styling
+ * White text for contrast against the wood background
+ * Bold weight for emphasis
+ */
+.site-title {
+    color: white;
+    font-size: 22px;
+    margin: 0;
+    font-weight: 800;
+}
+
+/*
+ * Navigation link styling with icons
+ * Uses flexbox column layout to stack icon above text
+ * Consistent with modern mobile app navigation patterns
+ */
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Icon spacing and sizing in navigation links */
+.nav-link i {
+    margin-bottom: 3px;
+    font-size: 16px;
+}
+
+/*
+ * Active state for current navigation link
+ * Subtle background darkening to indicate current page
+ * Compatible with all modern browsers
+ */
+.nav-link.active {
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent dark overlay */
+}
+
+/* Bottom tabs navigation links */
+#tabs-bottom .nav-link {
+    width: 50%;
+}
+
+/*======================== Feedback Page ========================*/
+/* Styles specific to the feedback.html page */
+
+/* Feedback page background styling */
+body.feedback-page {
+    background-image: url('../images/map-blur.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Override default main background for feedback page */
+body.feedback-page #main {
+    background-image: none;
+    background-color: transparent;
+    position: relative;
+}
+
+/* Add subtle overlay for better text readability on feedback page */
+body.feedback-page #main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Ensure content appears above the overlay */
+body.feedback-page #content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Feedback page title styling */
+.feedback-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a3d20;
+    margin: 20px 0 10px;
+}
+
+/* Feedback introduction text */
+.feedback-intro {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Feedback form container */
+#feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Form group for each input field */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling for form fields */
+#feedback-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #1a3d20;
+}
+
+/* Base styling for text inputs and textareas */
+#feedback-form input[type="text"],
+#feedback-form input[type="email"],
+#feedback-form input[type="date"],
+#feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Focus state for form inputs */
+#feedback-form input:focus,
+#feedback-form textarea:focus {
+    border-color: #2a8d46;
+    outline: none;
+    box-shadow: 0 0 5px rgba(42, 141, 70, 0.3);
+}
+
+/* Star rating container */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+/* Hide the radio buttons */
+.rating input {
+    display: none;
+}
+
+/* Star styling */
+.rating label {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ddd;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for stars */
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: #ffcc00;
+}
+
+/* Submit button styling */
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #2a8d46;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover state for submit button */
+.submit-button:hover {
+    background-color: #1a3d20;
+}
+
+/* Active tab styling for bottom navigation */
+#tabs-bottom a.active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Select dropdown styling */
+#feedback-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+/* Focus state for select dropdown */
+#feedback-form select:focus {
+    border-color: #2a8d46;
+    outline: none;
+    box-shadow: 0 0 5px rgba(42, 141, 70, 0.3);
+}
+
+/*======================== Thank You Page ========================*/
+/* Styles specific to the thank-you.html page */
+
+/* Thank you page background styling */
+body.thank-you-page {
+    background-image: url('../images/map-blur.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Override default main background for thank you page */
+body.thank-you-page #main {
+    background-image: none;
+    background-color: transparent;
+    position: relative;
+}
+
+/* Add subtle overlay for better text readability on thank you page */
+body.thank-you-page #main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Ensure content appears above the overlay */
+body.thank-you-page #content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Thank you page title styling */
+.thank-you-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    color: #1a3d20;
+    margin: 20px 0 15px;
+    text-transform: uppercase;
+}
+
+/* Thank you icon container */
+.thank-you-icon {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Thank you icon styling using Font Awesome */
+.thank-you-icon i {
+    font-size: 80px;
+    color: #2a8d46;
+    animation: checkmarkPulse 2s ease-in-out infinite;
+}
+
+/* Prominent pulsing animation for checkmark icon */
+@keyframes checkmarkPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+        filter: drop-shadow(0 0 15px rgba(42, 141, 70, 0.6));
+    }
+}
+
+/* Thank you confirmation message */
+.thank-you-message {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a3d20;
+    margin: 20px 0;
+}
+
+/* Thank you details text */
+.thank-you-details {
+    text-align: center;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+    margin: 15px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Return buttons container */
+.return-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px 0 20px;
+    align-items: center;
+}
+
+/* Base styling for return buttons */
+.return-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Primary button (Return to Home) */
+.primary-button {
+    background: linear-gradient(135deg, #2a8d46, #4CAF50);
+    color: white;
+    border: 2px solid #2a8d46;
+}
+
+/* Primary button hover effect with enhanced animation */
+.primary-button:hover {
+    background: linear-gradient(135deg, #1a3d20, #2a8d46);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(42, 141, 70, 0.4);
+}
+
+/* Secondary button (Explore Animals) */
+.secondary-button {
+    background: rgba(255, 255, 255, 0.9);
+    color: #2a8d46;
+    border: 2px solid #2a8d46;
+}
+
+/* Secondary button hover effect with enhanced animation */
+.secondary-button:hover {
+    background: #2a8d46;
+    color: white;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(42, 141, 70, 0.4);
+}
+
+/* Button active state */
+.return-button:active {
+    transform: translateY(-1px) scale(1.02);
+    transition: all 0.1s ease;
+}
+
+/* Standardized responsive design rules */
+@media (max-width: 768px) {
+    /* Navigation adjustments */
+    .nav-link i {
+        font-size: 14px;
+    }
+
+    .nav-link span {
+        font-size: 12px;
+    }
+
+    /* Content adjustments */
+    #info-box-full img,
+    .info-box img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Form adjustments */
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 14px;
+    }
+
+    /* Thank you page mobile adjustments */
+    .thank-you-title {
+        font-size: 24px;
+    }
+
+    .thank-you-icon i {
+        font-size: 60px;
+    }
+
+    .thank-you-message {
+        font-size: 18px;
+    }
+
+    .return-buttons {
+        gap: 12px;
+    }
+
+    .return-button {
+        min-width: 180px;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    /* Background image adjustments for mobile */
+    body.feedback-page,
+    body.thank-you-page {
+        background-attachment: scroll; /* Better performance on mobile */
+        background-size: cover;
+    }
+
+    /* Increase overlay opacity on mobile for better readability */
+    body.feedback-page #main::before,
+    body.thank-you-page #main::before {
+        background: rgba(255, 255, 255, 0.15);
+    }
+}
+
+/* ===== ZOO HEADER SPECTACULAR ANIMATION STYLES ===== */
+
+/* Main header container with gradient background and overflow hidden for animations */
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(135deg, #2a8d46 0%, #4CAF50 50%, #66BB6A 100%);
+    z-index: 500;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+    cursor: none; /* Hide cursor in header for immersive experience */
+}
+
+/* Remove the wood texture overlay - we're replacing it with animations */
+#header::before {
+    display: none;
+}
+
+/* Animated background particles container */
+.header-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Individual floating particles (leaves, sparkles) */
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: floatParticles 6s infinite linear;
+}
+
+/* Particle floating animation */
+@keyframes floatParticles {
+    0% {
+        transform: translateY(100px) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-20px) translateX(50px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Animated safari grass silhouettes at bottom of header */
+.safari-grass {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(to top, #1B5E20, transparent);
+    z-index: 2;
+}
+
+/* Individual grass blades */
+.grass-blade {
+    position: absolute;
+    bottom: 0;
+    width: 3px;
+    background: #2E7D32;
+    border-radius: 2px 2px 0 0;
+    transform-origin: bottom;
+    animation: grassSway 4s ease-in-out infinite;
+}
+
+/* Grass swaying animation */
+@keyframes grassSway {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+}
+
+/* Animal silhouettes that move across the header */
+.animal-silhouette {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    z-index: 1;
+    animation: animalWalk 15s infinite linear;
+    transform: translateY(-50%);
+}
+
+/* Animal walking animation */
+@keyframes animalWalk {
+    0% {
+        left: -50px;
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.7;
+    }
+    100% {
+        left: calc(100% + 50px);
+        opacity: 0;
+    }
+}
+
+/* Different animal shapes and timing */
+.animal-silhouette:nth-child(1) {
+    animation-delay: 0s;
+    border-radius: 20px 20px 5px 5px; /* Elephant shape */
+}
+
+.animal-silhouette:nth-child(2) {
+    animation-delay: 5s;
+    height: 45px;
+    width: 25px;
+    border-radius: 15px 15px 0 0; /* Giraffe shape */
+}
+
+.animal-silhouette:nth-child(3) {
+    animation-delay: 10s;
+    border-radius: 50%; /* Round animal */
+}
+
+/* Logo container with enhanced positioning and hover effects */
+#header img {
+    position: relative;
+    z-index: 10;
+    max-height: 70px;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+}
+
+/* Logo hover effect */
+#header img:hover {
+    transform: scale(1.05) rotate(2deg);
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+}
+
+/* Interactive cursor follower - shows when mouse enters header */
+.cursor-follower {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(255,193,7,0.8) 0%, rgba(255,193,7,0.2) 70%, transparent 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 5;
+    transition: all 0.1s ease;
+    opacity: 0;
+}
+
+/* Glowing orbs that follow mouse movement */
+.glow-orb {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(76,175,80,0.3) 0%, rgba(76,175,80,0.1) 50%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 3;
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+/* Safari sun in top right corner */
+.safari-sun {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle, #FFF176 0%, #FFEB3B 100%);
+    border-radius: 50%;
+    z-index: 2;
+    animation: sunGlow 3s ease-in-out infinite alternate;
+}
+
+/* Sun glowing animation */
+@keyframes sunGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+        transform: scale(1);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 235, 59, 0.8), 0 0 30px rgba(255, 235, 59, 0.4);
+        transform: scale(1.1);
+    }
+}
+
+/* Cloud formations floating across */
+.safari-cloud {
+    position: absolute;
+    top: 15px;
+    width: 30px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    z-index: 2;
+    animation: cloudFloat 20s infinite linear;
+}
+
+/* Cloud floating animation */
+@keyframes cloudFloat {
+    0% {
+        left: -40px;
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.7;
+    }
+    100% {
+        left: calc(100% + 40px);
+        opacity: 0;
+    }
+}
+
+/* Different cloud timings */
+.safari-cloud:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.safari-cloud:nth-child(2) {
+    animation-delay: 10s;
+    top: 25px;
+    width: 20px;
+    height: 8px;
+}
+
+/* Ambient wildlife sounds indicator (visual pulse) */
+.sound-pulse {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 15px;
+    height: 15px;
+    background: rgba(76, 175, 80, 0.6);
+    border-radius: 50%;
+    z-index: 2;
+    animation: soundPulse 2s ease-in-out infinite;
+}
+
+/* Sound pulse animation */
+@keyframes soundPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+}
+
+/* Help icon in header */
+.help-icon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #2a8d46;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2a8d46;
+    cursor: pointer;
+    z-index: 15;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    animation: helpIconPulse 2.8s ease-in-out infinite;
+}
+
+/* Prominent pulsing glow shimmer animation with orange flash for help icon - 2.8s duration */
+@keyframes helpIconPulse {
+    0%, 100% {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2), 0 0 5px 2px rgba(42, 141, 70, 0.6);
+        transform: scale(1);
+        border-color: #2a8d46;
+        background: rgba(255, 255, 255, 0.9);
+        color: #2a8d46;
+    }
+    35.7% {
+        box-shadow: 0 3px 12px rgba(0,0,0,0.25), 0 0 15px 5px rgba(42, 141, 70, 0.7), 0 0 25px 8px rgba(76, 175, 80, 0.3);
+        transform: scale(1.04);
+        border-color: #388E3C;
+        background: rgba(255, 255, 255, 0.95);
+        color: #2a8d46;
+    }
+    41.1% {
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 25px 8px rgba(255, 152, 0, 0.8), 0 0 35px 12px rgba(255, 193, 7, 0.6), 0 0 45px 15px rgba(255, 224, 130, 0.4);
+        transform: scale(1.08);
+        border-color: #FF9800;
+        background: #FF9800;
+        color: white;
+    }
+    50% {
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 25px 8px rgba(255, 152, 0, 0.8), 0 0 35px 12px rgba(255, 193, 7, 0.6), 0 0 45px 15px rgba(255, 224, 130, 0.4);
+        transform: scale(1.08);
+        border-color: #FF9800;
+        background: #FF9800;
+        color: white;
+    }
+    58.9% {
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 25px 8px rgba(42, 141, 70, 0.8), 0 0 35px 12px rgba(76, 175, 80, 0.4), 0 0 45px 15px rgba(129, 199, 132, 0.2);
+        transform: scale(1.08);
+        border-color: #4CAF50;
+        background: rgba(255, 255, 255, 1);
+        color: #2a8d46;
+    }
+    64.3% {
+        box-shadow: 0 3px 12px rgba(0,0,0,0.25), 0 0 15px 5px rgba(42, 141, 70, 0.7), 0 0 25px 8px rgba(76, 175, 80, 0.3);
+        transform: scale(1.04);
+        border-color: #388E3C;
+        background: rgba(255, 255, 255, 0.95);
+        color: #2a8d46;
+    }
+}
+
+.help-icon:hover {
+    background: #2a8d46;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(42, 141, 70, 0.4);
+    animation: none; /* Stop pulsing on hover */
+}
+
+/* Help modal overlay */
+.help-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Help modal content */
+.help-modal-content {
+    background: white;
+    border-radius: 12px;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Help modal header */
+.help-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px 15px;
+    border-bottom: 2px solid #e0e0e0;
+    background: linear-gradient(135deg, #2a8d46, #4CAF50);
+    color: white;
+    border-radius: 12px 12px 0 0;
+}
+
+.help-modal-header h2 {
+    margin: 0;
+    font-size: 22px;
+    color: white;
+}
+
+.help-close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.help-close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Help modal body */
+.help-modal-body {
+    padding: 25px;
+    line-height: 1.6;
+}
+
+.help-modal-body h3 {
+    color: #2a8d46;
+    margin: 20px 0 10px 0;
+    font-size: 18px;
+}
+
+.help-modal-body ul {
+    margin: 10px 0 20px 0;
+    padding-left: 20px;
+}
+
+.help-modal-body li {
+    margin: 8px 0;
+    color: #444;
+}
+
+.help-modal-body strong {
+    color: #1a3d20;
+}
+
+/* Help modal footer */
+.help-modal-footer {
+    padding: 20px 25px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    background: #f8f9fa;
+    border-radius: 0 0 12px 12px;
+}
+
+.back-to-home-btn {
+    background: #2a8d46;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(42, 141, 70, 0.3);
+}
+
+.back-to-home-btn:hover {
+    background: #1a3d20;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(42, 141, 70, 0.4);
+}
+
+.back-to-home-btn i {
+    margin-right: 8px;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+    .particle {
+        width: 6px;
+        height: 6px;
+    }
+
+    .animal-silhouette {
+        width: 30px;
+        height: 20px;
+    }
+
+    .safari-sun {
+        width: 20px;
+        height: 20px;
+        top: 8px;
+        right: 15px;
+    }
+
+    .glow-orb {
+        width: 40px;
+        height: 40px;
+    }
+
+    .help-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+        top: 12px;
+        left: 15px;
+    }
+
+    .help-modal-content {
+        margin: 10px;
+        max-height: 90vh;
+    }
+
+    .help-modal-header {
+        padding: 15px 20px 10px;
+    }
+
+    .help-modal-header h2 {
+        font-size: 18px;
+    }
+
+    .help-modal-body {
+        padding: 20px;
+    }
+
+    .help-modal-footer {
+        padding: 15px 20px;
+    }
+}
